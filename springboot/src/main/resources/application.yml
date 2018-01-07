@@ -1,6 +1,7 @@
 
 # yaml 配置
-server:
-  servlet:
-    context-path: /demo  #应用名
-  port: 8888             #端口号
+#server:
+#  servlet:
+#    context-path: /demo  #应用名
+#  port: 8888
+

@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,4 +17,17 @@ public class HelloWorldController {
     public String say(){
         return "hello world";
     }
+
+    @Value("${user.userName}")
+    private String name;
+
+    @Value("${user.userAge}")
+    private Integer age;
+
+    @RequestMapping("/user")
+    public String user(){
+
+        return "name:"+name +" age:"+age;
+    }
+
 }
